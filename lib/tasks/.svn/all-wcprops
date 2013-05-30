@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/owums/!svn/ver/457/trunk/lib/tasks
+END
+extract_fixtures.rake
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/owums/!svn/ver/173/trunk/lib/tasks/extract_fixtures.rake
+END
+test_load_fixtures.rake
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/owums/!svn/ver/236/trunk/lib/tasks/test_load_fixtures.rake
+END
+daemons_start_stop.rake
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/owums/!svn/ver/457/trunk/lib/tasks/daemons_start_stop.rake
+END
+load_fixtures.rake
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/owums/!svn/ver/173/trunk/lib/tasks/load_fixtures.rake
+END

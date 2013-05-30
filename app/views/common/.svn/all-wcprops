@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/owums/!svn/ver/425/trunk/app/views/common
+END
+invalid_token.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/owums/!svn/ver/382/trunk/app/views/common/invalid_token.html.erb
+END
+_top_traffic_users_brief.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/owums/!svn/ver/282/trunk/app/views/common/_top_traffic_users_brief.html.erb
+END
+invalid_token.mobile.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/owums/!svn/ver/382/trunk/app/views/common/invalid_token.mobile.erb
+END
+_radius_accounting_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/owums/!svn/ver/425/trunk/app/views/common/_radius_accounting_list.html.erb
+END
+_radius_accounting_list.mobile.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/owums/!svn/ver/425/trunk/app/views/common/_radius_accounting_list.mobile.erb
+END
+abuse.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/owums/!svn/ver/225/trunk/app/views/common/abuse.html.erb
+END
+_radius_accounting_list_brief.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/owums/!svn/ver/425/trunk/app/views/common/_radius_accounting_list_brief.html.erb
+END

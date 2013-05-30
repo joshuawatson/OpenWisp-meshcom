@@ -1,0 +1,92 @@
+<%= content_for :data_url, account_path %>
+
+<% content_for :header do %>
+    <h1><%=t :Information %></h1>
+    <%= link_to t(:Instructions), account_instructions_path, :class => 'clear_cache', 'data-icon' => 'info', 'data-role' => 'button' %>
+<% end %>
+
+<%# Reload the graphs every time, skipping jQuery Mobile cache %>
+<%= javascript_tag "
+        $(document).bind('pageshow', function(){
+            $.getScript('#{javascript_path('owums.account_logins_graph')}');
+            $.getScript('#{javascript_path('owums.account_traffic_graph')}');
+        });
+"%>
+
+<div data-role="collapsible-set">
+  <div data-role="collapsible">
+    <h2><%=h t(:Personal_details) %></h2>
+
+    <p>
+      <strong><%=t :Name %></strong>: <%=h @account.given_name %> <%=h @account.surname %>
+    </p>
+    <p>
+      <strong><%=t :Username %></strong>: <%=h @account.username %>
+    </p>
+
+    <% if @account.has_image? %>
+        <p>
+          <strong><%=t :Document_photo %></strong>:<br />
+          <%= embedded_image_tag(@account.operate { |img| img.resize 100 }) %>
+        </p>
+    <% end %>
+
+    <p>
+      <strong><%=t :State %></strong>: <%=h @account.state %>
+    </p>
+    <p>
+      <strong><%=t :City %></strong>: <%=h @account.city %>
+    </p>
+    <p>
+      <strong><%=t :Address %></strong>: <%=h @account.address %>
+    </p>
+    <p>
+      <strong><%=t :Email %></strong>: <%=h @account.email %>
+    </p>
+
+    <p><%= link_to t(:Edit), edit_account_path, 'data-role' => 'button', 'data-icon' => 'gear', 'data-theme' => 'a' %></p>
+  </div>
+
+  <div data-role="collapsible" data-collapsed="true">
+    <h2><%=h t(:Graphs) %></h2>
+
+    <h3><%=h t(:Logins) %></h3>
+    <div class="block account_graph" id="account_logins_graph"></div>
+
+    <h3><%=h t(:Traffic) %></h3>
+    <div class="block account_graph" id="account_traffic_graph"></div>
+  </div>
+
+  <div data-role="collapsible" data-collapsed="true">
+    <h2><%=h t(:Last_x_user_sessions, :count => 10) %></h2>
+
+    <table>
+      <thead>
+      <tr>
+        <th><strong><%=t :From %></strong></th>
+        <th><strong><%=t :To %></strong></th>
+        <th><strong><%=t :Downloaded_bytes %></strong></th>
+        <th><strong><%=t :Uploaded_bytes %></strong></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @account.last_sessions(10).each do |session| %>
+          <tr>
+            <td><%=l session.acct_start_time, :format => :short %></td>
+            <% if session.acct_stop_time.blank? %>
+                <td><%=t :online %></td>
+            <% else %>
+                <td><%=l session.acct_stop_time, :format => :short %></td>
+            <% end %>
+            <td><%=h bytes_to_human(session.acct_output_octets) %></td>
+            <td><%=h bytes_to_human(session.acct_input_octets) %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<p><%= button_to t(:Refresh_data), "", :method => :get, 'data-transition' => 'fade', 'data-icon' => 'refresh', 'data-theme' => 'a' %></p>
+

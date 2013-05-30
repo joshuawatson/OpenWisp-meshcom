@@ -1,0 +1,35 @@
+<table>
+  <thead>
+    <tr>
+      <th><%= t(:Username) %></th>
+      <th><%= t(:Start_time) %></th>
+      <th><%= t(:Stop_time) %></th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% accountings.each do |acct| %>
+    <tr>
+      <td>
+        <% if auth?(:users_browser)%>
+          <%= link_to h(acct.username), acct.user %>
+        <% else %>
+          <%= h(acct.username[0..-4] + "xxx") %>
+        <% end %>
+      </td>
+      <td><%=l acct.acct_start_time %></td>
+      <% if acct.acct_stop_time.blank? %>
+        <td><%=t :online %></td>
+      <% else %>
+        <td><%=l acct.acct_start_time %></td>
+      <% end %>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

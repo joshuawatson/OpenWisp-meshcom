@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/owums/!svn/ver/387/trunk/app/views/password_resets
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/owums/!svn/ver/173/trunk/app/views/password_resets/new.html.erb
+END
+new.mobile.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/owums/!svn/ver/387/trunk/app/views/password_resets/new.mobile.erb
+END

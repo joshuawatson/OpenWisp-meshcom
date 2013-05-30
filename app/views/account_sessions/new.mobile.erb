@@ -1,0 +1,41 @@
+<% content_for :header do %>
+    <h1><%=t :Login %></h1>
+<% end %>
+
+<% content_for :back do %>
+    <%= mobile_link_back_to root_path %>
+<% end %>
+
+<% form_for @account_session, :builder => ErrorFormBuilder, :url => account_session_path do |f| %>
+    <% if @account_session.errors.any? %>
+        <div data-role="collapsible">
+          <h3><%=t 'activerecord.errors.template.header', :count => @account_session.errors.count %></h3>
+          <p><%= f.error_messages %></p>
+        </div>
+    <% end %>
+
+    <ul data-role="listview" data-inset="true">
+      <li data-role="fieldcontain">
+        <% if Configuration.get('use_mobile_phone_as_username') == "true" %>
+            <%= f.label :username, t(:Username_or_mobile) %>
+        <% else %>
+            <%= f.label :username, t(:Username) %>
+        <% end %>
+        <%= f.text_field :username %>
+      </li>
+
+      <li data-role="fieldcontain">
+        <%= f.label t(:password) %>
+        <%= f.password_field :password %>
+      </li>
+
+      <li data-role="fieldcontain">
+        <%= f.label :remember_me, t(:remember_me) %>
+        <%= f.check_box :remember_me, :type => 'checkbox' %>
+      </li>
+
+      <li>
+        <%= f.submit t(:Login) %>
+      </li>
+    </ul>
+<% end %>

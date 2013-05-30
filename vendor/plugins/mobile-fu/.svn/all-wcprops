@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/owums/!svn/ver/388/trunk/vendor/plugins/mobile-fu
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/owums/!svn/ver/173/trunk/vendor/plugins/mobile-fu/Rakefile
+END
+README.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/owums/!svn/ver/209/trunk/vendor/plugins/mobile-fu/README.rdoc
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/owums/!svn/ver/173/trunk/vendor/plugins/mobile-fu/init.rb
+END
+CHANGELOG
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/owums/!svn/ver/173/trunk/vendor/plugins/mobile-fu/CHANGELOG
+END
+install.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/owums/!svn/ver/173/trunk/vendor/plugins/mobile-fu/install.rb
+END
+MIT-LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/owums/!svn/ver/173/trunk/vendor/plugins/mobile-fu/MIT-LICENSE
+END
+uninstall.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/owums/!svn/ver/173/trunk/vendor/plugins/mobile-fu/uninstall.rb
+END

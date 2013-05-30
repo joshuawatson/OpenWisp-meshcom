@@ -1,0 +1,269 @@
+# This file is part of the OpenWISP User Management System
+#
+# Copyright (C) 2010 CASPUR (Davide Guerri d.guerri@caspur.it)
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+class UsersController < ApplicationController
+  before_filter :require_operator
+  before_filter :load_user, :except => [ :index, :new, :create, :ajax_search, :browse, :search, :find ]
+
+  access_control do
+    default :deny
+    
+    allow :users_browser,    :to => [ :show, :browse, :ajax_search, :ajax_accounting_search, :createdownload, :createPDF ]
+    allow :users_registrant, :to => [ :new, :create, :createdownload, :createPDF ]
+    allow :users_manager,    :to => [ :new, :create, :edit, :update, :createdownload, :createPDF ]
+    allow :users_destroyer,  :to => [ :destroy ]
+    allow :users_finder,     :to => [ :find, :search, :show, :createdownload, :createPDF]
+    allow :stats_viewer,     :to => [ :index ]
+  end
+
+  STATS_PERIOD = 14
+
+  def load_user
+    @user = User.find(params[:id])
+  end
+  
+  def index
+  end
+  
+  def new
+    @user = User.new( :eula_acceptance => true, :privacy_acceptance => true, :state => 'Italy', :verification_method => User::VERIFY_BY_DOCUMENT )
+    @user.verified = true
+    @user.radius_group_ids = [ RadiusGroup::users_group ]
+    @countries = Country.find :all, :conditions => "disabled = 'f'", :order => :printable_name
+    @mobile_prefixes = MobilePrefix.find :all, :conditions => "disabled = 'f'", :order => :prefix
+    @radius_groups = RadiusGroup.all
+  end
+  
+  def create
+    @user = User.new(params[:user])   
+
+    # Parameter anti-tampering
+    unless current_operator.has_role? 'users_manager'
+      @user.radius_group_ids = [ RadiusGroup::users_group ]
+      @user.verified = @user.active = true
+    end
+    
+    @countries = Country.find :all, :conditions => "disabled = 'f'", :order => :printable_name
+    @mobile_prefixes = MobilePrefix.find :all, :conditions => "disabled = 'f'", :order => :prefix
+    @radius_groups = RadiusGroup.all
+
+    if @user.save
+      current_account_session.destroy unless current_account_session.nil?
+            
+      unless current_operator.has_role? 'users_manager'
+        redirect_to new_user_url
+      else
+        redirect_to users_url
+      end
+    else
+      render :action => :new
+    end
+  end
+  
+  def show
+  end
+ 
+  def edit
+    @countries = Country.find :all, :conditions => "disabled = 'f'", :order => :printable_name
+    @mobile_prefixes = MobilePrefix.find :all, :conditions => "disabled = 'f'", :order => :prefix
+    @radius_groups = RadiusGroup.all
+  end
+  
+  def createdownload
+  	user = User.find(params[:id])
+	
+	cpe= CpeTemplate.find(user.xuser.inst_cpe_modello);
+	template = cpe.template
+	template=template.gsub("<CPE_NAME>",user.xuser.inst_cpe_username)
+	template=template.gsub("<CPE_PASSWORD>",user.xuser.inst_cpe_password)
+	file_name = cpe.name,".txt"
+	t = Tempfile.new("tmp-cpe_configuration_file-#{Time.now}")
+	t.write(template)
+	t.close
+	send_file t.path, :type => 'text/plain; charset=utf-8',
+                             :disposition => 'attachment',
+                             :filename => file_name
+  end
+  require 'pdf/writer'
+
+  def createPDF
+  	
+  	user = User.find(params[:id])
+  	pdf = PDF::Writer.new(:paper => "A4",:orientation => :portrait)
+  	
+  	
+  	pdf.margins_pt(36, 54, 72, 54)
+  	pdf.start_page_numbering(300, pdf.bottom_margin, 9, nil, nil, 1)
+   	pdf.select_font 'Helvetica'
+   	
+   	x = pdf.page_width - pdf.right_margin # flush right
+	y = pdf.page_height - pdf.top_margin  # flush top
+  	# Draw a box at the margin positions.
+	x = pdf.absolute_left_margin
+	w = pdf.absolute_right_margin - x
+  	# or pdf.margin_width
+	y = pdf.absolute_bottom_margin
+	h = pdf.absolute_top_margin - y
+  	# or pdf.margin_height
+	
+   	
+   	pdf.rectangle(pdf.left_margin, pdf.absolute_top_margin-24, pdf.margin_width, 24).stroke
+   	pdf.text "Meshcom Contratto Utenza.", :font_size => 14, :justification => :center
+   	
+   	pdf.move_pointer(34)
+   	pdf.text("<C:bullet /><b>Ragione sociale:</b>"+user.xuser.sg_rag_soc, :font_size => 10, :justification => :left,:spacing => 1.5,:left => 50)
+   	pdf.text("<C:bullet /><b>Partita Iva:</b>"+ user.xuser.sg_p_iva, :font_size => 10, :justification => :left,:spacing => 1.5,:left => 50)
+   	
+   	pdf.text('<C:bullet /><b>Indirizzo legale</b>: '+user.xuser.sg_indirizzo, :font_size => 10, :justification => :left,:spacing => 1.5,:left => 50)
+   	
+	pdf.add_link("http://www.meshcom.eu", pdf.left_margin, 100, pdf.left_margin + 400, 120)
+	pdf.text("copryright Meshcom srl", :font_size => 10, :justification => :center, :left => 50)
+	
+	
+   	send_data pdf.render, :filename => 'meshcom-contratto.pdf', :type => "application/pdf"
+  end
+  
+  def update
+    # Parameter anti-tampering
+    params[:user][:radius_group_ids] = nil unless current_operator.has_role? 'users_manager'
+    
+    @countries = Country.find :all, :conditions => "disabled = 'f'", :order => :printable_name
+    @mobile_prefixes = MobilePrefix.find :all, :conditions => "disabled = 'f'", :order => :prefix
+    @radius_groups = RadiusGroup.all
+    
+    if @user.update_attributes(params[:user])
+      current_account_session.destroy unless current_account_session.nil?
+            
+      flash[:notice] = I18n.t(:Account_updated)
+      redirect_to user_url
+    else
+      render :action => :edit
+    end
+  end
+
+  def destroy
+    @user.destroy
+    redirect_to users_url
+  end
+
+  def find
+    if params[:user] && params[:user][:query]
+      query = params[:user][:query]
+      found_users = User.find_all_by_user_phone_or_mail(query)
+
+      if found_users.count == 1
+        @user = found_users.first
+        redirect_to @user
+      elsif found_users.count > 1
+        flash[:error] = I18n.t(:Too_many_search_results)
+        render :action => :search
+      else
+        flash[:error] = I18n.t(:User_not_found)
+        render :action => :search
+      end
+    else
+      flash[:error] = I18n.t(:User_not_found)
+      render :action => :search
+    end
+  end
+
+  def search
+  end
+
+  def browse
+	## MODIFIED: Added 4 lines
+	respond_to do |format|
+	  format.html # browse.html.erb
+	  format.xml  { render :xml => User.all }
+    end
+	## END MODIFIED
+  end
+
+  def ajax_search
+    items_per_page = Configuration.get('default_user_search_results_per_page')
+
+    sort = case params[:sort]
+      when 'registered_at'      then "created_at"
+      when 'username'           then "username"
+      when 'given_name'         then "given_name"
+      when 'surname'            then "surname"
+      when 'state'              then "state"
+      when 'city'               then "city"
+      when 'address'            then "address"
+      when 'verified'           then "verified"
+      when 'active'             then "active"
+      when 'registered_at_rev'  then "created_at DESC"
+      when 'username_rev'       then "username DESC"
+      when 'given_name_rev'     then "given_name DESC"
+      when 'surname_rev'        then "surname DESC"
+      when 'state_rev'          then "state DESC"
+      when 'city_rev'           then "city DESC"
+      when 'address_rev'        then "address DESC"
+      when 'verified_rev'       then "verified DESC"
+      when 'active_rev'         then "active DESC"
+    end
+    if sort.nil?
+      params[:sort] = "registered_at_rev"
+      sort = "created_at DESC"
+    end  
+
+    search = params[:search]
+    page = params[:page].nil? ? 1 : params[:page]
+    
+    unless search.nil?
+      search.gsub(/\\/, '\&\&').gsub(/'/, "''")
+      conditions = [ "given_name LIKE ? OR surname LIKE ? OR username LIKE ? OR CONCAT(mobile_prefix,mobile_suffix) LIKE ? OR CONCAT_WS(' ', given_name, surname) LIKE ? OR CONCAT_WS(' ', surname, given_name) LIKE ?", "%#{search}%","%#{search}%","%#{search}%","%#{search}%","%#{search}%","%#{search}%" ] 
+    else
+      conditions = []
+    end
+
+    @total_users = User.count :conditions => conditions
+    @users = User.paginate :page => page, :order => sort, :conditions => conditions, :per_page => items_per_page
+
+    render :partial => "list", :locals => { :action => 'ajax_search', :users => @users, :total_users => @total_users }
+  end
+
+  def ajax_accounting_search
+    items_per_page = Configuration.get('default_radacct_results_per_page')
+
+    sort = case params[:sort]
+      when 'acct_start_time'          then "AcctStartTime"
+      when 'acct_stop_time'           then "AcctStopTime"
+      when 'acct_input_octets'       then "AcctInputOctets"
+      when 'acct_output_octets'      then "AcctOutputOctets"
+      when 'calling_station_id'       then "CallingStationId"
+      when 'framed_ip_address'        then "FramedIPAddress"
+      when 'acct_start_time_rev'      then "AcctStartTime DESC"
+      when 'acct_stop_time_rev'       then "AcctStopTime DESC"
+      when 'acct_input_octets_rev'   then "AcctInputOctets DESC"
+      when 'acct_output_octets_rev'  then "AcctOutputOctets DESC"
+      when 'calling_station_id_rev'   then "CallingStationId DESC"
+      when 'framed_ip_address_rev'    then "FramedIPAddress DESC"
+    end
+    if sort.nil?
+      params[:sort] = "acct_start_time_rev"
+      sort = "AcctStartTime DESC"
+    end
+
+    page = params[:page].nil? ? 1 : params[:page]
+
+    @total_accountings =  @user.radius_accountings.count
+    @radius_accountings = @user.radius_accountings.paginate :page => page, :order => sort, :per_page => items_per_page
+
+    render :partial => "common/radius_accounting_list", :locals => { :action => 'ajax_accounting_search', :accountings => @radius_accountings, :total_accountings => @total_accountings } 
+  end
+end

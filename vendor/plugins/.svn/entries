@@ -1,0 +1,37 @@
+10
+
+dir
+563
+https://spider.caspur.it/svn/owums/trunk/vendor/plugins
+https://spider.caspur.it/svn/owums
+
+
+
+2011-06-08T10:30:45.609167Z
+454
+mlatini
+has-props
+
+
+svn:externals
+
+
+
+
+
+
+
+
+
+
+5138533c-a9dd-4de3-8f63-5d0952db6ac7
+
+mobile-fu
+dir
+
+backgroundrb
+dir
+
+daemon_generator
+dir
+

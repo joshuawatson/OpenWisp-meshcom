@@ -1,0 +1,28 @@
+<table>
+  <thead>
+    <tr>
+      <th><%= t(:Username) %></th>
+      <th><%= t(:Traffic_total) %></th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% top_traffic_users.each do |user| %>
+    <tr>
+      <td>
+        <% if auth?(:users_browser)%>
+          <%= link_to h(user.username), user %>
+        <% else %>
+          <%= h(user.username[0..-4] + "xxx") %>
+        <% end %>
+      </td>
+      <td><%=h bytes_to_human(user.total_traffic) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/owums/!svn/ver/457/trunk/lib
+END
+mobile_phone_sip_busy_machine.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/owums/!svn/ver/421/trunk/lib/mobile_phone_sip_busy_machine.rb
+END
+sip_busy_machine.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/owums/!svn/ver/383/trunk/lib/sip_busy_machine.rb
+END
+error_form_builder.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/owums/!svn/ver/173/trunk/lib/error_form_builder.rb
+END
+null_crypto_provider.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/owums/!svn/ver/173/trunk/lib/null_crypto_provider.rb
+END
+custom_logger.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/owums/!svn/ver/257/trunk/lib/custom_logger.rb
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/owums/!svn/ver/173/trunk/vendor/plugins/daemon_generator/generators/daemon/templates
+END
+daemons
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/owums/!svn/ver/173/trunk/vendor/plugins/daemon_generator/generators/daemon/templates/daemons
+END
+daemons.yml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/owums/!svn/ver/173/trunk/vendor/plugins/daemon_generator/generators/daemon/templates/daemons.yml
+END
+script.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/owums/!svn/ver/173/trunk/vendor/plugins/daemon_generator/generators/daemon/templates/script.rb
+END
+script_ctl
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/owums/!svn/ver/173/trunk/vendor/plugins/daemon_generator/generators/daemon/templates/script_ctl
+END

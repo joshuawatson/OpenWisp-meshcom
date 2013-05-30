@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/owums/!svn/ver/431/trunk/test/fixtures
+END
+nas.yml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/owums/!svn/ver/236/trunk/test/fixtures/nas.yml
+END
+dictionary.yml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/owums/!svn/ver/236/trunk/test/fixtures/dictionary.yml
+END
+online_users.yml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/owums/!svn/ver/431/trunk/test/fixtures/online_users.yml
+END
+radius_groups.yml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/owums/!svn/ver/236/trunk/test/fixtures/radius_groups.yml
+END
+radius_checks.yml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/owums/!svn/ver/236/trunk/test/fixtures/radius_checks.yml
+END
+configurations.yml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/owums/!svn/ver/236/trunk/test/fixtures/configurations.yml
+END
+radius_replies.yml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/owums/!svn/ver/236/trunk/test/fixtures/radius_replies.yml
+END
+countries.yml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/owums/!svn/ver/236/trunk/test/fixtures/countries.yml
+END
+mobile_prefixes.yml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/owums/!svn/ver/236/trunk/test/fixtures/mobile_prefixes.yml
+END

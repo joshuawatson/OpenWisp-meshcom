@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/owums/!svn/ver/387/trunk/app/views/mobile_phone_password_resets
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/owums/!svn/ver/387/trunk/app/views/mobile_phone_password_resets/edit.html.erb
+END
+verification.mobile.erb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/owums/!svn/ver/387/trunk/app/views/mobile_phone_password_resets/verification.mobile.erb
+END
+recovery_confirmation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/owums/!svn/ver/173/trunk/app/views/mobile_phone_password_resets/recovery_confirmation.html.erb
+END
+edit.mobile.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/owums/!svn/ver/387/trunk/app/views/mobile_phone_password_resets/edit.mobile.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/owums/!svn/ver/173/trunk/app/views/mobile_phone_password_resets/new.html.erb
+END
+recovery_confirmation.mobile.erb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/owums/!svn/ver/173/trunk/app/views/mobile_phone_password_resets/recovery_confirmation.mobile.erb
+END
+new.mobile.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/owums/!svn/ver/387/trunk/app/views/mobile_phone_password_resets/new.mobile.erb
+END
+_verification.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/owums/!svn/ver/379/trunk/app/views/mobile_phone_password_resets/_verification.html.erb
+END
+verification.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/owums/!svn/ver/379/trunk/app/views/mobile_phone_password_resets/verification.html.erb
+END
+_verification.mobile.erb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/owums/!svn/ver/379/trunk/app/views/mobile_phone_password_resets/_verification.mobile.erb
+END

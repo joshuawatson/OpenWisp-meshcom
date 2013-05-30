@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/owums/!svn/ver/554/trunk/app/models
+END
+user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/owums/!svn/ver/449/trunk/app/models/user.rb
+END
+notifier.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/owums/!svn/ver/374/trunk/app/models/notifier.rb
+END
+online_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/owums/!svn/ver/432/trunk/app/models/online_user.rb
+END
+radius_check.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/owums/!svn/ver/173/trunk/app/models/radius_check.rb
+END
+mobile_prefix.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/owums/!svn/ver/173/trunk/app/models/mobile_prefix.rb
+END
+radius_nas.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/owums/!svn/ver/173/trunk/app/models/radius_nas.rb
+END
+operator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/owums/!svn/ver/390/trunk/app/models/operator.rb
+END
+account.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/owums/!svn/ver/449/trunk/app/models/account.rb
+END
+operator_session.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/owums/!svn/ver/173/trunk/app/models/operator_session.rb
+END
+account_session.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/owums/!svn/ver/173/trunk/app/models/account_session.rb
+END
+role.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/owums/!svn/ver/173/trunk/app/models/role.rb
+END
+radius_accounting.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/owums/!svn/ver/437/trunk/app/models/radius_accounting.rb
+END
+radius_reply.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/owums/!svn/ver/173/trunk/app/models/radius_reply.rb
+END
+radius_group.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/owums/!svn/ver/173/trunk/app/models/radius_group.rb
+END
+country.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/owums/!svn/ver/173/trunk/app/models/country.rb
+END
+account_common.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/owums/!svn/ver/554/trunk/app/models/account_common.rb
+END
+configuration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/owums/!svn/ver/195/trunk/app/models/configuration.rb
+END

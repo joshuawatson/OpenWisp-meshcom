@@ -1,0 +1,17 @@
+<%= content_for :data_url, verification_path %>
+
+<%= javascript_tag "owums.hideWhenJsIsAvailable('.no_js');" %>
+
+<% content_for :header do %>
+    <h1><%=t :Verification %></h1>
+<% end %>
+
+<div id="verification_div">
+  <%= render :partial => 'verification' %>
+</div>
+
+<%= periodically_call_remote( :url => { :action => 'verification' },
+                                    :frequency => '2',
+                                    :update => 'verification_div')
+%>
+

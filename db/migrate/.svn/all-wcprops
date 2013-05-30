@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/owums/!svn/ver/306/trunk/db/migrate
+END
+20090920121954_create_operators_roles.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/owums/!svn/ver/173/trunk/db/migrate/20090920121954_create_operators_roles.rb
+END
+20090919154910_create_operators.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/owums/!svn/ver/173/trunk/db/migrate/20090919154910_create_operators.rb
+END
+20090920121738_create_roles.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/owums/!svn/ver/173/trunk/db/migrate/20090920121738_create_roles.rb
+END
+20100115150513_create_mobile_prefixes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/owums/!svn/ver/173/trunk/db/migrate/20100115150513_create_mobile_prefixes.rb
+END
+20100105150432_create_backgroundrb_queue_table.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/owums/!svn/ver/173/trunk/db/migrate/20100105150432_create_backgroundrb_queue_table.rb
+END
+20091228173405_create_radius_stuff.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/owums/!svn/ver/287/trunk/db/migrate/20091228173405_create_radius_stuff.rb
+END
+20100115150746_create_countries.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/owums/!svn/ver/173/trunk/db/migrate/20100115150746_create_countries.rb
+END
+20091227122908_create_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/owums/!svn/ver/250/trunk/db/migrate/20091227122908_create_users.rb
+END
+20091228110343_create_radius_replies.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/owums/!svn/ver/173/trunk/db/migrate/20091228110343_create_radius_replies.rb
+END
+20110317145357_add_more_indexes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/owums/!svn/ver/306/trunk/db/migrate/20110317145357_add_more_indexes.rb
+END
+20091227133453_create_sessions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/owums/!svn/ver/173/trunk/db/migrate/20091227133453_create_sessions.rb
+END
+20091228103337_create_radius_groups_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/owums/!svn/ver/173/trunk/db/migrate/20091228103337_create_radius_groups_users.rb
+END
+20091228110359_create_radius_checks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/owums/!svn/ver/173/trunk/db/migrate/20091228110359_create_radius_checks.rb
+END
+20091227151854_create_simple_captcha_data.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/owums/!svn/ver/173/trunk/db/migrate/20091227151854_create_simple_captcha_data.rb
+END
+20100114113944_create_configurations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/owums/!svn/ver/173/trunk/db/migrate/20100114113944_create_configurations.rb
+END
+20091228102900_create_radius_groups.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/owums/!svn/ver/173/trunk/db/migrate/20091228102900_create_radius_groups.rb
+END

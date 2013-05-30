@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/owums/!svn/ver/412/trunk/config/initializers
+END
+inflections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/owums/!svn/ver/173/trunk/config/initializers/inflections.rb
+END
+require_external_commands.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/owums/!svn/ver/412/trunk/config/initializers/require_external_commands.rb
+END
+session_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/owums/!svn/ver/173/trunk/config/initializers/session_store.rb
+END
+available_locales.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/owums/!svn/ver/173/trunk/config/initializers/available_locales.rb
+END
+exception_notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/owums/!svn/ver/384/trunk/config/initializers/exception_notification.rb
+END
+backtrace_silencers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/owums/!svn/ver/173/trunk/config/initializers/backtrace_silencers.rb
+END
+acl9.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/owums/!svn/ver/296/trunk/config/initializers/acl9.rb
+END
+new_rails_defaults.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/owums/!svn/ver/173/trunk/config/initializers/new_rails_defaults.rb
+END
+mime_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/owums/!svn/ver/173/trunk/config/initializers/mime_types.rb
+END

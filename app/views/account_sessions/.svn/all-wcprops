@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/owums/!svn/ver/387/trunk/app/views/account_sessions
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/owums/!svn/ver/346/trunk/app/views/account_sessions/new.html.erb
+END
+new.mobile.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/owums/!svn/ver/387/trunk/app/views/account_sessions/new.mobile.erb
+END

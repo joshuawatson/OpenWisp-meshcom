@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/owums/!svn/ver/563/trunk/app/controllers
+END
+configurations_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/owums/!svn/ver/354/trunk/app/controllers/configurations_controller.rb
+END
+email_password_resets_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/owums/!svn/ver/386/trunk/app/controllers/email_password_resets_controller.rb
+END
+operators_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/owums/!svn/ver/354/trunk/app/controllers/operators_controller.rb
+END
+simple_captcha_reader_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/owums/!svn/ver/173/trunk/app/controllers/simple_captcha_reader_controller.rb
+END
+stats_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/owums/!svn/ver/430/trunk/app/controllers/stats_controller.rb
+END
+accounts_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/owums/!svn/ver/407/trunk/app/controllers/accounts_controller.rb
+END
+operator_sessions_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/owums/!svn/ver/385/trunk/app/controllers/operator_sessions_controller.rb
+END
+users_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/owums/!svn/ver/545/trunk/app/controllers/users_controller.rb
+END
+account_sessions_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/owums/!svn/ver/385/trunk/app/controllers/account_sessions_controller.rb
+END
+application_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/owums/!svn/ver/563/trunk/app/controllers/application_controller.rb
+END
+online_users_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/owums/!svn/ver/432/trunk/app/controllers/online_users_controller.rb
+END
+mobile_phone_password_resets_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/owums/!svn/ver/387/trunk/app/controllers/mobile_phone_password_resets_controller.rb
+END
+password_resets_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/owums/!svn/ver/173/trunk/app/controllers/password_resets_controller.rb
+END

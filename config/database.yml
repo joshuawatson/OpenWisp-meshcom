@@ -1,0 +1,26 @@
+production:
+  adapter: mysql
+  encoding: utf8
+  database: owumsp
+  pool: 5
+  username: owums
+  password: owums
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  adapter: mysql
+  encoding: utf8
+  database: owumsd
+  pool: 5
+  username: owums
+  password: owums
+  socket: /var/run/mysqld/mysqld.sock
+
+test:
+  adapter: mysql
+  encoding: utf8
+  database: owumst
+  pool: 5
+  username: owums
+  password: owums
+  socket: /var/run/mysqld/mysqld.sock

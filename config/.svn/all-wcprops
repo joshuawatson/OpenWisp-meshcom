@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/owums/!svn/ver/455/trunk/config
+END
+backgroundrb.yml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/owums/!svn/ver/423/trunk/config/backgroundrb.yml
+END
+routes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/owums/!svn/ver/432/trunk/config/routes.rb
+END
+boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/owums/!svn/ver/285/trunk/config/boot.rb
+END
+daemons.yml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/owums/!svn/ver/173/trunk/config/daemons.yml
+END
+environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/owums/!svn/ver/339/trunk/config/environment.rb
+END
+preinitializer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/owums/!svn/ver/455/trunk/config/preinitializer.rb
+END
+database.yml.example
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/owums/!svn/ver/239/trunk/config/database.yml.example
+END

@@ -1,0 +1,22 @@
+<%= content_for :data_url, password_reset_path %>
+
+<% content_for :header do %>
+    <h1><%=t :Recover %></h1>
+<% end %>
+
+<% content_for :back do %>
+    <%= mobile_link_back_to root_path %>
+<% end %>
+
+<% form_tag password_resets_path do %>
+    <ul data-role="listview" data-inset="true">
+      <li data-role="fieldcontain">
+        <%=t :Forgot_password_description_select %>
+        <%= select_tag "recovery_method", options_for_select(@recovery_methods.map { |r| [t(r), r] }),
+                       { :prompt => t(:select_recovery_method), :multiple => false }
+        %>
+      </li>
+
+      <li><%= submit_tag t(:Next) %></li>
+    </ul>
+<% end %>

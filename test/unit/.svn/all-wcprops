@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/owums/!svn/ver/431/trunk/test/unit
+END
+user_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/owums/!svn/ver/173/trunk/test/unit/user_test.rb
+END
+nas_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/owums/!svn/ver/173/trunk/test/unit/nas_test.rb
+END
+radacct_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/owums/!svn/ver/173/trunk/test/unit/radacct_test.rb
+END
+online_user_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/owums/!svn/ver/431/trunk/test/unit/online_user_test.rb
+END
+radius_reply_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/owums/!svn/ver/173/trunk/test/unit/radius_reply_test.rb
+END
+country_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/owums/!svn/ver/173/trunk/test/unit/country_test.rb
+END
+radius_group_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/owums/!svn/ver/173/trunk/test/unit/radius_group_test.rb
+END
+mobile_prefix_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/owums/!svn/ver/173/trunk/test/unit/mobile_prefix_test.rb
+END
+radius_check_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/owums/!svn/ver/173/trunk/test/unit/radius_check_test.rb
+END
+configuration_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/owums/!svn/ver/173/trunk/test/unit/configuration_test.rb
+END
+users_radius_groups_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/owums/!svn/ver/173/trunk/test/unit/users_radius_groups_test.rb
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/owums/!svn/ver/431/trunk/test
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/owums/!svn/ver/173/trunk/test/test_helper.rb
+END
+bdrb_test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/owums/!svn/ver/173/trunk/test/bdrb_test_helper.rb
+END

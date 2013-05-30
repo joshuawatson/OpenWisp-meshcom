@@ -1,0 +1,18 @@
+<%= javascript_tag "owums.hideWhenJsIsAvailable('.no_js');" %>
+
+<% content_for :header do %>
+    <h1><%=t :Verification %></h1>
+<% end %>
+
+<% content_for :back do %>
+    <%= mobile_link_back_to new_mobile_phone_password_reset_path %>
+<% end %>
+
+<div id="verification_div">
+  <%= render :partial => 'verification' %>
+</div>
+
+<%= periodically_call_remote( :url => { :action => 'verification' , :id => @single_access_token },
+                              :frequency => '2',
+                              :update => 'verification_div')
+%>

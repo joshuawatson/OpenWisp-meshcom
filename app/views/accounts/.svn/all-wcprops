@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/owums/!svn/ver/554/trunk/app/views/accounts
+END
+_form.mobile.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/owums/!svn/ver/449/trunk/app/views/accounts/_form.mobile.erb
+END
+instructions.mobile.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/owums/!svn/ver/407/trunk/app/views/accounts/instructions.mobile.erb
+END
+no_verification.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/owums/!svn/ver/173/trunk/app/views/accounts/no_verification.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/owums/!svn/ver/425/trunk/app/views/accounts/show.html.erb
+END
+no_verification.mobile.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/owums/!svn/ver/173/trunk/app/views/accounts/no_verification.mobile.erb
+END
+_verification.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/owums/!svn/ver/554/trunk/app/views/accounts/_verification.html.erb
+END
+verification.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/owums/!svn/ver/379/trunk/app/views/accounts/verification.html.erb
+END
+show.mobile.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/owums/!svn/ver/407/trunk/app/views/accounts/show.mobile.erb
+END
+_verification.mobile.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/owums/!svn/ver/554/trunk/app/views/accounts/_verification.mobile.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/owums/!svn/ver/173/trunk/app/views/accounts/edit.html.erb
+END
+verification.mobile.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/owums/!svn/ver/387/trunk/app/views/accounts/verification.mobile.erb
+END
+edit.mobile.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/owums/!svn/ver/387/trunk/app/views/accounts/edit.mobile.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/owums/!svn/ver/217/trunk/app/views/accounts/new.html.erb
+END
+new.mobile.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/owums/!svn/ver/387/trunk/app/views/accounts/new.mobile.erb
+END
+_expired.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/owums/!svn/ver/360/trunk/app/views/accounts/_expired.html.erb
+END
+expired.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/owums/!svn/ver/173/trunk/app/views/accounts/expired.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/owums/!svn/ver/449/trunk/app/views/accounts/_form.html.erb
+END
+_expired.mobile.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/owums/!svn/ver/173/trunk/app/views/accounts/_expired.mobile.erb
+END
+expired.mobile.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/owums/!svn/ver/173/trunk/app/views/accounts/expired.mobile.erb
+END
+instructions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/owums/!svn/ver/407/trunk/app/views/accounts/instructions.html.erb
+END

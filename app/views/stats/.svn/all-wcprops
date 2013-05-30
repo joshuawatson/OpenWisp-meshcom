@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/owums/!svn/ver/424/trunk/app/views/stats
+END
+show.json.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/owums/!svn/ver/413/trunk/app/views/stats/show.json.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/owums/!svn/ver/415/trunk/app/views/stats/index.html.erb
+END
+show.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/owums/!svn/ver/413/trunk/app/views/stats/show.js.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/owums/!svn/ver/424/trunk/app/views/stats/show.html.erb
+END

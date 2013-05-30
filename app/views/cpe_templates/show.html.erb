@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @cpe_template.name %>
+</p>
+
+<p>
+  <b>Template:</b>
+  <%=h @cpe_template.template %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%=h @cpe_template.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_cpe_template_path(@cpe_template) %> |
+<%= link_to 'Back', cpe_templates_path %>

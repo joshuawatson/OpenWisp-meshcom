@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/owums/!svn/ver/374/trunk/app/views/notifier
+END
+password_reset_instructions.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/owums/!svn/ver/374/trunk/app/views/notifier/password_reset_instructions.erb
+END

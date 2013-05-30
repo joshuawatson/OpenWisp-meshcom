@@ -1,0 +1,98 @@
+<% content_for :after_defaults do %>
+    <%= javascript_include_tag 'highcharts',
+                               'owums.graphs',
+                               'owums.account_logins_graph',
+                               'owums.account_traffic_graph'
+    %>
+<% end %>
+
+<div class="grid_3">
+  <div class="box">
+    <div class="block" id="general_info">
+      <fieldset>
+        <p>
+          <strong><%=t :Given_name %></strong><br />
+          <%=h @account.given_name %>
+        </p>
+        <p>
+          <strong><%=t :Surname %></strong><br />
+          <%=h @account.surname %>
+        </p>
+        <p>
+          <strong><%=t :Username %></strong><br />
+          <%=h @account.username %>
+        </p>
+        <% if @account.has_image? %>
+            <p>
+              <strong><%=t :Document_photo %></strong><br />
+              <%= embedded_image_tag(@account.operate { |img| img.resize 100 }) %>
+            </p>
+        <% end %>
+        <p>
+          <strong><%=t :State %></strong><br />
+          <%=h @account.state %>
+        </p>
+        <p>
+          <strong><%=t :City %></strong><br />
+          <%=h @account.city %>
+        </p>
+        <p>
+          <strong><%=t :Address %></strong><br />
+          <%=h @account.address %>
+        </p>
+        <p>
+          <strong><%=t :Email %></strong><br />
+          <%=h @account.email %>
+        </p>
+        <p>
+          <strong><%=t :Registration_date %></strong><br />
+          <%=l @account.created_at %>
+        </p>
+        <p>
+          <strong><%=t :Verification_date %></strong><br />
+          <% if @account.verified %>
+              <%=l @account.verified_at %>
+          <% else %>
+              <span style="color: red; "><%=t :Not_verified %></span>
+          <% end %>
+        </p>
+        <p>
+          <strong><%=t :Radius_logins %></strong><br />
+          <%=h @account.radius_accountings.count %>
+        </p>
+        <p>
+          <strong><%=t :Last_login_ip %></strong><br />
+          <%=h @account.last_login_ip %>
+        </p>
+      </fieldset>
+    </div>
+  </div>
+</div>
+
+<div class="grid_9">
+  <p>
+    <%= button_to t(:Refresh_data), "", :method => :get %>
+  </p>
+  <div class="clear"></div>
+
+  <div class="box">
+    <h2><%=h t(:Logins) %></h2>
+    <div class="block account_graph" id="account_logins_graph"></div>
+  </div>
+
+  <div class="box">
+    <h2><%=h t(:Traffic) %></h2>
+    <div class="block account_graph" id="account_traffic_graph"></div>
+  </div>
+</div>
+
+<div class="clear"></div>
+<div class="grid_12">
+  <div class="box">
+    <h2><%=h t(:User_sessions) %></h2>
+    <div class="block" id="rad_list_block">
+      <%= @controller.ajax_accounting_search %>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
